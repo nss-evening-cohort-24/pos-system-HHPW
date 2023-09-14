@@ -1,0 +1,82 @@
+{
+  "-NeFzCGo6KokAtIHuH4p": {
+    "orderId": 1,
+    "paymentType": "debit",
+    "orderTotal": 75,
+    "tipAmount": 26,
+    "orderDate": "2022-09-23 23:32:00",
+    "firebaseKey": "-NeFzCGo6KokAtIHuH4p"
+  },
+  "-NeFzCGo6KokAtIHuH4q": {
+    "orderId": 2,
+    "paymentType": "credit",
+    "orderTotal": 46,
+    "tipAmount": 29,
+    "orderDate": "2023-03-19 14:46:14",
+    "firebaseKey": "-NeFzCGo6KokAtIHuH4q"
+  },
+  "-NeFzCGpMD_BfqmPMWF1": {
+    "orderId": 3,
+    "paymentType": "debit",
+    "orderTotal": 96,
+    "tipAmount": 16,
+    "orderDate": "2023-06-12 12:49:15",
+    "firebaseKey": "-NeFzCGpMD_BfqmPMWF1"
+  },
+  "-NeFzCGpMD_BfqmPMWF2": {
+    "orderId": 4,
+    "paymentType": "check",
+    "orderTotal": 28,
+    "tipAmount": 9,
+    "orderDate": "2023-02-17 01:12:48",
+    "firebaseKey": "-NeFzCGpMD_BfqmPMWF2"
+  },
+  "-NeFzCGq8OtSQy8wH0_J": {
+    "orderId": 5,
+    "paymentType": "cash",
+    "orderTotal": 23,
+    "tipAmount": 25,
+    "orderDate": "2023-06-29 12:51:48",
+    "firebaseKey": "-NeFzCGq8OtSQy8wH0_J"
+  },
+  "-NeFzCGq8OtSQy8wH0_K": {
+    "orderId": 6,
+    "paymentType": "check",
+    "orderTotal": 29,
+    "tipAmount": 2,
+    "orderDate": "2022-12-12 11:26:01",
+    "firebaseKey": "-NeFzCGq8OtSQy8wH0_K"
+  },
+  "-NeFzCGq8OtSQy8wH0_L": {
+    "orderId": 7,
+    "paymentType": "credit",
+    "orderTotal": 91,
+    "tipAmount": 10,
+    "orderDate": "2023-05-16 03:51:42",
+    "firebaseKey": "-NeFzCGq8OtSQy8wH0_L"
+  },
+  "-NeFzCGr3LG2-gZz05uT": {
+    "orderId": 8,
+    "paymentType": "cash",
+    "orderTotal": 98,
+    "tipAmount": 9,
+    "orderDate": "2023-06-04 05:01:42",
+    "firebaseKey": "-NeFzCGr3LG2-gZz05uT"
+  },
+  "-NeFzCGr3LG2-gZz05uU": {
+    "orderId": 9,
+    "paymentType": "debit",
+    "orderTotal": 19,
+    "tipAmount": 21,
+    "orderDate": "2023-02-22 01:05:05",
+    "firebaseKey": "-NeFzCGr3LG2-gZz05uU"
+  },
+  "-NeFzCGsWxG5tY7vh4Oz": {
+    "orderId": 10,
+    "paymentType": "check",
+    "orderTotal": 82,
+    "tipAmount": 8,
+    "orderDate": "2022-11-23 21:50:11",
+    "firebaseKey": "-NeFzCGsWxG5tY7vh4Oz"
+  }
+}
