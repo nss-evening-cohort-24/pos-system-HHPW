@@ -1,5 +1,5 @@
-[
-  {
+{
+  "280019251-8": {
     "customerName": "Raf Gainforth",
     "customerId": "110.122.184.202/1",
     "phoneNumber": "971-603-8031",
@@ -8,7 +8,7 @@
     "orderStatus": true,
     "firebaseKey": "280019251-8"
   },
-  {
+  "010207055-5": {
     "customerName": "Moore Fyldes",
     "customerId": "166.246.121.132/13",
     "phoneNumber": "298-901-3692",
@@ -17,7 +17,7 @@
     "orderStatus": false,
     "firebaseKey": "010207055-5"
   },
-  {
+  "594132184-8": {
     "customerName": "Barrett Tewkesberry",
     "customerId": "26.236.84.117/1",
     "phoneNumber": "228-274-0193",
@@ -26,7 +26,7 @@
     "orderStatus": true,
     "firebaseKey": "594132184-8"
   },
-  {
+  "969618379-8": {
     "customerName": "Sheri Franke",
     "customerId": "197.10.60.94/23",
     "phoneNumber": "848-154-6068",
@@ -35,7 +35,7 @@
     "orderStatus": false,
     "firebaseKey": "969618379-8"
   },
-  {
+  "194331063-7": {
     "customerName": "Evered Didsbury",
     "customerId": "132.83.88.19/12",
     "phoneNumber": "442-847-4446",
@@ -44,7 +44,7 @@
     "orderStatus": true,
     "firebaseKey": "194331063-7"
   },
-  {
+  "233748873-X": {
     "customerName": "Hedda Holleworth",
     "customerId": "95.86.9.170/11",
     "phoneNumber": "780-645-4309",
@@ -53,7 +53,7 @@
     "orderStatus": false,
     "firebaseKey": "233748873-X"
   },
-  {
+  "745189118-6": {
     "customerName": "Isabelita Speight",
     "customerId": "75.50.141.45/4",
     "phoneNumber": "327-819-0102",
@@ -62,7 +62,7 @@
     "orderStatus": true,
     "firebaseKey": "745189118-6"
   },
-  {
+  "407994654-6": {
     "customerName": "Norman Copland",
     "customerId": "190.240.217.107/30",
     "phoneNumber": "477-246-5332",
@@ -71,7 +71,7 @@
     "orderStatus": true,
     "firebaseKey": "407994654-6"
   },
-  {
+  "392165108-5": {
     "customerName": "Theodore Baurerich",
     "customerId": "166.225.51.195/29",
     "phoneNumber": "256-625-7044",
@@ -80,7 +80,7 @@
     "orderStatus": false,
     "firebaseKey": "392165108-5"
   },
-  {
+  "973960909-0": {
     "customerName": "Winn Trevett",
     "customerId": "148.213.195.26/11",
     "phoneNumber": "770-337-9643",
@@ -89,4 +89,4 @@
     "orderStatus": true,
     "firebaseKey": "973960909-0"
   }
-]
+}
