@@ -1,0 +1,52 @@
+[
+  {
+    "item_name": "Teriyaki Wings",
+    "item_price": "$8.75",
+    "firebaseKey": "-NeG-RGXTtlmZ4LEv4-e"
+  },
+  {
+    "item_name": "Garlic Parmesan Wings",
+    "item_price": "$7.50",
+    "firebaseKey": "-NeG-YEpyALMR7BZGEk5"
+  },
+  {
+    "item_name": "BBQ Chicken Pizza",
+    "item_price": "$9.99",
+    "firebaseKey": "-NeG-_T2K8oGvL5XZKnd"
+  },
+  {
+    "item_name": "Supreme Pizza",
+    "item_price": "$10.25",
+    "firebaseKey": "-NeG-bV7fdrfD6b3-xnB"
+  },
+  {
+    "item_name": "Supreme Pizza",
+    "item_price": "$10.25",
+    "firebaseKey": "-NeG08IRq02uAV5rZycf"
+  },
+  {
+    "item_name": "Pepperoni Pizza",
+    "item_price": "$8.75",
+    "firebaseKey": "-NeG0ATTAq54IspHQ1HK"
+  },
+  {
+    "item_name": "Margherita Pizza",
+    "item_price": "$7.50",
+    "firebaseKey": "-NeG0P2ismhYFF_PDrvx"
+  },
+  {
+    "item_name": "Teriyaki Wings",
+    "item_price": "$8.75",
+    "firebaseKey": "-NeG0QTXAzC1kuTpHL7i"
+  },
+  {
+    "item_name": "Pepperoni Pizza",
+    "item_price": "$9.99",
+    "firebaseKey": "-NeG0RyTtvcwfeSFgMJk"
+  },
+  {
+    "item_name": "Buffalo Wings",
+    "item_price": "$8.50",
+    "firebaseKey": "-NeG0Tne7-HpTA3-9Gbw"
+  }
+]
