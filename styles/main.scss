@@ -8,3 +8,13 @@ body {
   text-align: center;
   margin-top: 100px;
 }
+
+#form-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+form {
+  width: 400px;
+}
