@@ -3,8 +3,8 @@ import renderToDom from '../utils/renderToDom';
 
 const viewOrderDetails = (obj) => {
   clearDom();
-  let domstring = '';
-  domstring += `
+  let domString = '';
+  domString += `
   <h1 id="runningTotal">Running Total$$</h1>
   `;
 
@@ -20,11 +20,11 @@ const viewOrderDetails = (obj) => {
     </div>`;
   });
 
-  domstring += `
+  domString += `
     <button type="button" class="btn btn-primary">Add Item</button>
     <button type="button" class="btn btn-secondary">Go to Payment</button>
     `;
-  renderToDom('#view', domstring);
+  renderToDom('#view', domString);
 };
 
 export default viewOrderDetails;
