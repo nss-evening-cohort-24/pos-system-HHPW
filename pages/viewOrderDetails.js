@@ -24,7 +24,7 @@ const viewOrderDetails = (obj) => {
     <button type="button" class="btn btn-primary">Add Item</button>
     <button type="button" class="btn btn-secondary">Go to Payment</button>
     `;
-  renderToDom('#view', domString);
+  renderToDom('#view-container', domString);
 };
 
 export default viewOrderDetails;

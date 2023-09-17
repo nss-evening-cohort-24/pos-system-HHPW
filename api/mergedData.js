@@ -1,9 +1,11 @@
 import { getSingleOrder } from './orderData';
-import getOrderItems from './orderItemsData';
+import { getOrderItems, getSingleOrderItem } from './orderItemsData';
 
 const getOrderDetails = async (firebaseKey) => {
   const order = await getSingleOrder(firebaseKey);
-  const orderItems = await getOrderItems(order.firebaseKey);
+  const allOrderItems = await getOrderItems(firebaseKey);
+  const getSingleItems = await allOrderItems.map((item) => getSingleOrderItem(item.itemId));
+  const orderItems = await Promise.all(getSingleItems);
   return { ...order, orderItems };
 };
 
