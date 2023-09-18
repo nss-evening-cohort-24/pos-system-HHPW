@@ -22,8 +22,8 @@ const viewAllOrders = (array) => {
         <ul>${obj.email}</ul>
         <ul>${obj.orderType}</ul>
         <button type="button" id="view-details-btn--${obj.firebaseKey}" class="btn btn-outline-dark">View</button>
-        <button type="button" id="edit-details-btn--${obj.firebaseKey}" class="btn btn-outline-dark">View</button>
-        <button type="button" id="delete-order-btn--${obj.firebaseKey}" class="btn btn-outline-dark">View</button>
+        <button type="button" id="edit-details-btn--${obj.firebaseKey}" class="btn btn-outline-dark">Edit</button>
+        <button type="button" id="delete-order-btn--${obj.firebaseKey}" class="btn btn-outline-dark">Delete</button>
       </div>
     </div>
       `;
