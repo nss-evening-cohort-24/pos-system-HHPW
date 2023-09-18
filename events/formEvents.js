@@ -1,6 +1,6 @@
 import { createOrder, updateOrder } from '../api/orderData';
 
-const formEvents = (user) => {
+const formEvents = () => {
   document.querySelector('#form-container').addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -11,7 +11,6 @@ const formEvents = (user) => {
         orderStatus: false,
         orderType: document.querySelector('#orderType').value,
         phoneNumber: document.querySelector('#customerPhone').value,
-        uid: user.uid
       };
 
       createOrder(payload).then(({ name }) => {
@@ -22,4 +21,4 @@ const formEvents = (user) => {
   });
 };
 
-export default formEvents();
+export default formEvents;

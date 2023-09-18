@@ -1,11 +1,11 @@
-import clearDom from '../../utils/clearDom';
 import renderToDom from '../../utils/renderToDom';
+import clearDom from '../../utils/clearDom';
 
 const createOrderForm = (obj = {}) => {
   clearDom();
 
   const domString = `
-  <form>
+  <form id="${obj.firebaseKey ? `edit-order--${obj.firebaseKey}` : 'submit-order'}">
   <div class="mb-3">
     <label class="form-label">Customer Name</label>
     <input type="text" class="form-control" id="customerName" value="${obj.customerName || ''}" required>
@@ -29,7 +29,7 @@ const createOrderForm = (obj = {}) => {
   </form>
   `;
 
-  renderToDom('#form-container', domString);
+  renderToDom('#main-container', domString);
 };
 
 export default createOrderForm;
