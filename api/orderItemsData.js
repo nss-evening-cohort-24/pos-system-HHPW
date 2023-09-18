@@ -15,7 +15,8 @@ const getOrderItems = (orderId) => new Promise((resolve, reject) => {
       } else {
         resolve([]);
       }
-    }).catch(reject);
+    })
+    .catch(reject);
 });
 
 const getSingleOrderItem = (firebaseKey) => new Promise((resolve, reject) => {

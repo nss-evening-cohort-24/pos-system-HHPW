@@ -4,7 +4,7 @@ import renderToDom from '../utils/renderToDom';
 const viewOrderDetails = (obj) => {
   clearDom();
   let domString = '';
-  domString += `
+  domString = `
   <h1 id="runningTotal">Running Total$$</h1>
   `;
 
