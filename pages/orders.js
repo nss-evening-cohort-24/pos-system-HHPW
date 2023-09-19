@@ -1,5 +1,5 @@
 import renderToDom from '../utils/renderToDom';
-import clearDOM from '../utils/clearDom';
+import clearDom from '../utils/clearDom';
 
 const emptyOrders = () => {
   const domString = '<h1> There are no orders! </h1>';
@@ -7,7 +7,7 @@ const emptyOrders = () => {
 };
 
 const viewAllOrders = (array) => {
-  clearDOM();
+  clearDom();
 
   let domString = '';
   if (array.length < 1) {
