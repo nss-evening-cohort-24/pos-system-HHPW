@@ -18,4 +18,15 @@ const getOrderItems = (firebaseKey) => new Promise((resolve, reject) => {
     }).catch(reject);
 });
 
-export default getOrderItems;
+const deleteOrderItem = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/order_items/${firebaseKey}.json`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  }).then((response) => response.json())
+    .then(resolve)
+    .catch(reject);
+});
+
+export { getOrderItems, deleteOrderItem };
