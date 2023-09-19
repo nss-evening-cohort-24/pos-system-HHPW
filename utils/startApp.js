@@ -1,15 +1,19 @@
 import logoutButton from '../components/logoutButton';
-import domEvents from '../events/domEvents';
-import welcome from '../pages/welcome';
+import navBar from '../components/navBar';
 import domBuilder from './domBuilder';
+import welcome from '../pages/welcome';
+import domEvents from '../events/domEvents';
+import navEvents from '../events/navEvents';
 import formEvents from '../events/formEvents';
 
-const startApp = () => {
+const startApp = (user) => {
   domBuilder();
-  logoutButton();
+  navBar();
+  domEvents(user);
   welcome();
-  domEvents();
-  formEvents();
+  formEvents(user);
+  navEvents(user);
+  logoutButton();
 };
 
 export default startApp;

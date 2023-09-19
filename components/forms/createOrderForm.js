@@ -29,7 +29,7 @@ const createOrderForm = (obj = {}) => {
   </form>
   `;
 
-  renderToDom('#main-container', domString);
+  renderToDom('#form-container', domString);
 };
 
 export default createOrderForm;
