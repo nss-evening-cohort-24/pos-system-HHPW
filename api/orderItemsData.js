@@ -2,20 +2,21 @@ import client from '../utils/client';
 
 const endpoint = client.databaseURL;
 
-const getOrderItems = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/order_items.json?orderBy="orderId"&equalTo"${firebaseKey}"`, {
+const getOrderItems = (orderId) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/order_items.json?orderBy="orderId"&equalTo="${orderId}"`, {
     method: 'GET',
-    header: {
+    headers: {
       'Content-Type': 'application/json'
     },
-  }).then((response) => response.json)
+  }).then((response) => response.json())
     .then((data) => {
       if (data) {
         resolve(Object.values(data));
       } else {
         resolve([]);
       }
-    }).catch(reject);
+    })
+    .catch(reject);
 });
 
 const deleteOrderItem = (firebaseKey) => new Promise((resolve, reject) => {
@@ -25,8 +26,20 @@ const deleteOrderItem = (firebaseKey) => new Promise((resolve, reject) => {
       'Content-Type': 'application/json'
     },
   }).then((response) => response.json())
-    .then(resolve)
+    .then((data) => resolve(data))
     .catch(reject);
 });
 
-export { getOrderItems, deleteOrderItem };
+const getSingleOrderItem = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/order_items/${firebaseKey}.json`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+export { getOrderItems, getSingleOrderItem, deleteOrderItem };
