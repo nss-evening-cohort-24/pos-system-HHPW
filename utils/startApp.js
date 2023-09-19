@@ -9,7 +9,7 @@ const startApp = (user) => {
   domBuilder();
   navBar();
   domEvents(user);
-  welcome();
+  welcome(user);
   navEvents();
   logoutButton();
 };

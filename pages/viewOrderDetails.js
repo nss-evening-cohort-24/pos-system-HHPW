@@ -5,7 +5,6 @@ const viewOrderDetails = (obj) => {
   clearDom();
   let domString = '';
   const total = obj.orderItems.reduce((prev, next) => prev + next.item_price, 0);
-  console.warn(obj);
 
   domString = `
   <h1 id="subTotal">Total: $${total.toFixed(2)}</h1>
@@ -27,8 +26,8 @@ const viewOrderDetails = (obj) => {
   }
 
   domString += `
-    <button type="button" id="add-item-btn" class="btn btn-primary">Add Item</button>
-    <button type="button" id="go-to-payment-btn" class="btn btn-secondary">Go to Payment</button>
+    <button type="button" id="add-item-btn--${obj.firebaseKey}" class="btn btn-primary">Add Item</button>
+    <button type="button" id="go-to-payment-btn--${obj.firebaseKey}" class="btn btn-secondary">Go to Payment</button>
     `;
   renderToDom('#view-container', domString);
 };

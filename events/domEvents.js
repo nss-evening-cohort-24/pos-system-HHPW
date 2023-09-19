@@ -19,7 +19,8 @@ const domEvents = () => {
     }
 
     if (e.target.id.includes('add-item-btn')) {
-      addItemForm();
+      const [, orderId] = e.target.id.split('--');
+      addItemForm(orderId);
     }
   });
 

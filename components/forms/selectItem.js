@@ -2,7 +2,7 @@ import { getMenuItems } from '../../api/menuData';
 import renderToDOM from '../../utils/renderToDom';
 
 const selectItem = () => {
-  let domString = `<label for="item">Select an Item</label>
+  let domString = `<label for="item">Select a Menu Item</label>
     <select class="form-control" id="itemId" required>
     <option value="">Select an Item</option>`;
 
@@ -11,7 +11,7 @@ const selectItem = () => {
       domString += `
           <option 
             value="${item.firebaseKey}">
-              ${item.item_name} ${item.item_price}
+              ${item.item_name} ${item.item_price.toFixed(2)}
           </option>`;
     });
 
