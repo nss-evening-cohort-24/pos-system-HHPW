@@ -14,7 +14,7 @@ const viewAllOrders = (array) => {
     domString += '<p>No Orders Found</p>';
   } else {
     array.forEach((obj) => {
-      domString += `<div class="card" style="width: 18rem;">
+      domString += `<div class="card" id="order-card" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title">${obj.customerName}</h5>
         <ul>${obj.orderStatus}</ul>
@@ -29,7 +29,7 @@ const viewAllOrders = (array) => {
       `;
     });
   }
-  renderToDom('#view-container', domString);
+  renderToDom('#card-container', domString);
 };
 
 export { emptyOrders, viewAllOrders };
