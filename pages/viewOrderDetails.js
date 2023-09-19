@@ -9,11 +9,12 @@ const viewOrderDetails = (obj) => {
   `;
 
   obj.orderItems.forEach((item) => {
+    console.warn(obj);
     domString += `
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">${item.name}</h5>
-          <p class="card-text bold">${item.price}</p>
+        <h5 class="card-title">${item.item_name}</h5>
+          <p class="card-text bold">${item.item_price}</p>
           <i id="edit-item-btn--${item.firebaseKey}" class="fas fa-edit btn btn-info"></i>
           <i id="delete-item-btn--${item.firebaseKey}" class="btn btn-danger fas fa-trash-alt"></i>
       </div>
