@@ -2,6 +2,7 @@ import getOrderDetails from '../api/mergedData';
 import { getOrders } from '../api/orderData';
 import { viewAllOrders } from '../pages/orders';
 import viewOrderDetails from '../pages/viewOrderDetails';
+import addItemForm from '../components/forms/addItemForm';
 
 const domEvents = () => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
@@ -11,12 +12,13 @@ const domEvents = () => {
         viewOrderDetails(data);
       });
     }
-  });
 
-  document.querySelector('#main-container').addEventListener('click', (e) => {
     if (e.target.id.includes('view-orders-btn')) {
-      console.warn('clicked');
       getOrders().then(viewAllOrders);
+    }
+
+    if (e.target.id.includes('add-item-btn')) {
+      addItemForm();
     }
   });
 };
