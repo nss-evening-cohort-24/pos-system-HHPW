@@ -5,7 +5,7 @@ import viewOrderDetails from '../pages/viewOrderDetails';
 
 const domEvents = () => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
-    if (e.target.id.includes('view-order-details-btn')) {
+    if (e.target.id.includes('view-details-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
       getOrderDetails(firebaseKey).then((data) => {
         viewOrderDetails(data);
