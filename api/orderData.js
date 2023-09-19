@@ -30,4 +30,5 @@ const getSingleOrder = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+// ?orderBy="uid"&equalTo="${uid}"
 export { getOrders, getSingleOrder };
