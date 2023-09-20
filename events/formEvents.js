@@ -1,8 +1,8 @@
 import { createOrder, getOrders, updateOrder } from '../api/orderData';
 import { viewAllOrders } from '../pages/orders';
 import { createOrderItem, updateOrderItem } from '../api/orderItemsData';
-import getOrderDetails from '../api/mergedData';
 import viewOrderDetails from '../pages/viewOrderDetails';
+import { getOrderDetails } from '../api/mergedData';
 
 const formEvents = (user) => {
   document.querySelector('#form-container').addEventListener('submit', (e) => {
@@ -26,7 +26,7 @@ const formEvents = (user) => {
       });
     }
 
-    if (e.target.id.includes('submit-add-item')) {
+    if (e.target.id.includes('add-item')) {
       const [, orderId] = e.target.id.split('--');
 
       const payload = {
@@ -34,12 +34,11 @@ const formEvents = (user) => {
         itemId: document.querySelector('#itemId').value,
         uid: user.uid
       };
-
       createOrderItem(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
 
         updateOrderItem(patchPayload).then(() => {
-          getOrderDetails(orderId).then((res) => viewOrderDetails(res));
+          getOrderDetails(orderId).then((obj) => viewOrderDetails(obj));
         });
       });
     }
