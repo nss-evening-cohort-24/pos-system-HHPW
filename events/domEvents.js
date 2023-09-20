@@ -4,6 +4,7 @@ import { getOrders } from '../api/orderData';
 import { viewAllOrders, emptyOrders } from '../pages/orders';
 import viewOrderDetails from '../pages/viewOrderDetails';
 import addItemForm from '../components/forms/addItemForm';
+// import { deleteOrderItem } from '../api/orderItemsData';
 
 /* eslint-disable no-alert */
 const domEvents = (user) => {
@@ -50,6 +51,11 @@ const domEvents = (user) => {
 
     if (e.target.id.includes('create-order')) {
       createOrderForm();
+    }
+
+    if (e.target.id.includes('delete-order-item-btn')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      console.warn(firebaseKey);
     }
   });
 };
