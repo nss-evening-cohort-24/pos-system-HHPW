@@ -6,7 +6,8 @@
     "email": "rgainforth0@123-reg.co.uk",
     "orderType": true,
     "orderStatus": true,
-    "firebaseKey": "280019251-8"
+    "firebaseKey": "280019251-8",
+    "uid": "Uu9HWe2oDJbNGa7m8Bquf0aAyPk1"
   },
   "010207055-5": {
     "customerName": "Moore Fyldes",
@@ -15,7 +16,8 @@
     "email": "mfyldes1@ebay.com",
     "orderType": false,
     "orderStatus": false,
-    "uid": "010207055-5"
+    "firebaseKey": "010207055-5",
+    "uid": "Uu9HWe2oDJbNGa7m8Bquf0aAyPk1"
   },
   "594132184-8": {
     "customerName": "Barrett Tewkesberry",
@@ -24,7 +26,8 @@
     "email": "btewkesberry2@hc360.com",
     "orderType": true,
     "orderStatus": true,
-    "firebaseKey": "594132184-8"
+    "firebaseKey": "594132184-8",
+    "uid": "Uu9HWe2oDJbNGa7m8Bquf0aAyPk1"
   },
   "969618379-8": {
     "customerName": "Sheri Franke",
@@ -33,7 +36,8 @@
     "email": "sfranke3@chicagotribune.com",
     "orderType": false,
     "orderStatus": false,
-    "firebaseKey": "969618379-8"
+    "firebaseKey": "969618379-8",
+    "uid": "Uu9HWe2oDJbNGa7m8Bquf0aAyPk1"
   },
   "194331063-7": {
     "customerName": "Evered Didsbury",
@@ -42,7 +46,8 @@
     "email": "edidsbury4@liveinternet.ru",
     "orderType": false,
     "orderStatus": true,
-    "firebaseKey": "194331063-7"
+    "firebaseKey": "194331063-7",
+    "uid": "w7gGHCsxZegVnNnuVJzfGHNBPa43"
   },
   "233748873-X": {
     "customerName": "Hedda Holleworth",
@@ -51,7 +56,8 @@
     "email": "hholleworth5@lulu.com",
     "orderType": true,
     "orderStatus": false,
-    "firebaseKey": "233748873-X"
+    "firebaseKey": "233748873-X",
+    "uid": "w7gGHCsxZegVnNnuVJzfGHNBPa43"
   },
   "745189118-6": {
     "customerName": "Isabelita Speight",
@@ -60,7 +66,8 @@
     "email": "ispeight6@xrea.com",
     "orderType": false,
     "orderStatus": true,
-    "firebaseKey": "745189118-6"
+    "firebaseKey": "745189118-6",
+    "uid": "w7gGHCsxZegVnNnuVJzfGHNBPa43"
   },
   "407994654-6": {
     "customerName": "Norman Copland",
@@ -69,7 +76,8 @@
     "email": "ncopland7@intel.com",
     "orderType": true,
     "orderStatus": true,
-    "firebaseKey": "407994654-6"
+    "firebaseKey": "407994654-6",
+    "uid": "Q18AhEz1Y5PduR2XlNobmdUSpRE3"
   },
   "392165108-5": {
     "customerName": "Theodore Baurerich",
@@ -78,7 +86,8 @@
     "email": "tbaurerich8@reference.com",
     "orderType": true,
     "orderStatus": false,
-    "firebaseKey": "392165108-5"
+    "firebaseKey": "392165108-5",
+    "uid": "Q18AhEz1Y5PduR2XlNobmdUSpRE3"
   },
   "973960909-0": {
     "customerName": "Winn Trevett",
@@ -87,6 +96,7 @@
     "email": "wtrevett9@sitemeter.com",
     "orderType": false,
     "orderStatus": true,
-    "firebaseKey": "973960909-0"
+    "firebaseKey": "973960909-0",
+    "uid": "Q18AhEz1Y5PduR2XlNobmdUSpRE3"
   }
 }

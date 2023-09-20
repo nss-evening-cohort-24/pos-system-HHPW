@@ -17,8 +17,13 @@ const domEvents = (user) => {
 
   document.querySelector('#main-container').addEventListener('click', (e) => {
     if (e.target.id.includes('view-orders-btn')) {
-      console.warn('clicked');
-      getOrders(user.uid).then(viewAllOrders);
+      getOrders(user.uid).then((array) => {
+        if (array.length) {
+          viewAllOrders(array);
+        } else {
+          emptyOrders();
+        }
+      });
     }
   });
 
