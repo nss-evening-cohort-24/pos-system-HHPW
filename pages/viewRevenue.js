@@ -7,7 +7,7 @@ const viewRevenue = (obj = {}) => {
   domString += `
   <div id="view-revenue-info">
     <h1>Revenue</h1>
-    <h1>Total Revenue:${obj.totalRevenue}</h1>
+    <h1>Total Revenue: $ ${obj.totalRevenue}</h1>
     <div id="revenue-details">
       <h3>Revenue Details</h3>
       <p>Total Tips: ${obj.totalTips}</p>
