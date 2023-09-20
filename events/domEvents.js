@@ -16,8 +16,13 @@ const domEvents = (user) => {
     }
 
     if (e.target.id.includes('view-orders-btn')) {
-      console.warn('clicked');
-      getOrders(user.uid).then(viewAllOrders);
+      getOrders(user.uid).then((array) => {
+        if (array.length) {
+          viewAllOrders(array);
+        } else {
+          emptyOrders();
+        }
+      });
     }
 
     if (e.target.id.includes('add-item-btn')) {
