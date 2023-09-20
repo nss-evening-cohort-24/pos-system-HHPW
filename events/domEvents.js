@@ -54,10 +54,14 @@ const domEvents = (user) => {
     }
 
     if (e.target.id.includes('delete-order-item-btn')) {
-      const [, firebaseKey] = e.target.id.split('--');
-      console.warn(firebaseKey);
-    }
-  });
+      const [, itemId, orderId] = e.target.id.split('--');
+  
+        // GET THE SINGLE ORDERBOOK WITH THE RELATED BOOK AND ORDER ID
+        getSingleBookOrder(bookId, orderId).then((obj) => deleteBookOrder(obj.firebaseKey)).then(() => {
+          getOrderDetails(orderId).then((res) => viewOrder(res, user.uid));
+        });
+      }
+  
 };
 
 export default domEvents;
