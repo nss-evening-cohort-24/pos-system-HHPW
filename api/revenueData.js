@@ -1,4 +1,5 @@
 import client from '../utils/client';
+import revenueTotalsObject from '../utils/revenueTotalsObject';
 
 const endpoint = client.databaseURL;
 
@@ -13,8 +14,8 @@ const getRevenue = () => new Promise((resolve, reject) => {
   }).then((response) => response.json())
     .then((data) => {
       if (data) {
-        const revenueArray = Object.values(data);
-        const revenue = revenueArray.map((item) => Number(item.orderTotal)).reduce((a, b) => a + b, 0);
+        const getRevenueObj = Object.values(data);
+        const revenue = revenueTotalsObject(getRevenueObj);
         resolve(revenue);
       } else {
         resolve([]);
