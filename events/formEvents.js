@@ -1,24 +1,25 @@
-import viewOrderDetails from '../pages/viewOrderDetails';
-import { createOrderItem, updateOrderItem } from '../api/orderItemsData';
-import { getOrderDetails } from '../api/mergedData';
+import { createOrder, getOrders, updateOrder } from '../api/orderData';
+import { viewAllOrders } from '../pages/orders';
 
 const formEvents = (user) => {
-  document.querySelector('#main-container').addEventListener('submit', (e) => {
+  document.querySelector('#form-container').addEventListener('submit', (e) => {
     e.preventDefault();
-    if (e.target.id.includes('submit-add-item')) {
-      const [, orderId] = e.target.id.split('--');
 
+    if (e.target.id.includes('submit-order')) {
+      console.warn('click check');
       const payload = {
-        orderId,
-        itemId: document.querySelector('#itemId').value,
+        customerName: document.querySelector('#customerName').value,
+        email: document.querySelector('#customerEmail').value,
+        orderStatus: false,
+        orderType: document.querySelector('#orderType').value,
+        phoneNumber: document.querySelector('#customerPhone').value,
         uid: user.uid
       };
 
-      createOrderItem(payload).then(({ name }) => {
+      createOrder(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
-
-        updateOrderItem(patchPayload).then(() => {
-          getOrderDetails(orderId).then((res) => viewOrderDetails(res));
+        updateOrder(patchPayload).then(() => {
+          getOrders(user.uid).then(viewAllOrders);
         });
       });
     }
