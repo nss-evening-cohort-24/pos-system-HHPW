@@ -3,6 +3,7 @@ import { getOrderDetails, deleteOrderRelationship } from '../api/mergedData';
 import { getOrders } from '../api/orderData';
 import { viewAllOrders, emptyOrders } from '../pages/orders';
 import viewOrderDetails from '../pages/viewOrderDetails';
+import viewRevenue from '../pages/revenue';
 
 /* eslint-disable no-alert */
 const domEvents = (user) => {
@@ -44,8 +45,12 @@ const domEvents = (user) => {
       }
     }
 
-    if (e.target.id.includes('create-order')) {
+    if (e.target.id.includes('create-order-btn')) {
       createOrderForm();
+    }
+
+    if (e.target.id.includes('view-revenue-btn')) {
+      viewRevenue();
     }
   });
 };
