@@ -48,6 +48,12 @@ const domEvents = (user) => {
       createOrderForm();
     }
   });
+
+  document.querySelector('#card-container').addEventListener('click', (e) => {
+    if (e.target.id.includes('edit-details-btn')) {
+      createOrderForm();
+    }
+  });
 };
 
 export default domEvents;

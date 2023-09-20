@@ -23,6 +23,21 @@ const formEvents = (user) => {
         });
       });
     }
+
+    if (e.target.id.includes('edit-order')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      const payload = {
+        customerName: document.querySelector('#customerName').value,
+        phoneNumber: document.querySelector('#customerPhone').value,
+        email: document.querySelector('#customerEmail').value,
+        orderType: document.querySelector('#orderType').value,
+        uid: user.uid,
+        firebaseKey,
+      };
+      updateOrder(payload).then(() => {
+        getOrders(user.uid).then(viewAllOrders);
+      });
+    }
   });
 };
 
