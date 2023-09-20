@@ -5,7 +5,7 @@ import { viewAllOrders, emptyOrders } from '../pages/orders';
 import viewOrderDetails from '../pages/viewOrderDetails';
 
 /* eslint-disable no-alert */
-const domEvents = (useruser) => {
+const domEvents = (user) => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
     if (e.target.id.includes('view-details-btn')) {
       const [, firebaseKey] = e.target.id.split('--');

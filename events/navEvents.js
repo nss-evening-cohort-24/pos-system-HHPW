@@ -4,7 +4,6 @@ import welcome from '../pages/welcome';
 import clearDom from '../utils/clearDom';
 
 const navEvents = (user) => {
-const navEvents = (user) => {
   document.querySelector('#navigation').addEventListener('click', (e) => {
     if (e.target.id.includes('view-all-orders-nav')) {
       getOrders(user.uid).then((array) => {
