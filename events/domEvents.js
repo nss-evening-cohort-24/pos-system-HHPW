@@ -1,6 +1,6 @@
 import createOrderForm from '../components/forms/createOrderForm';
 import { getOrderDetails, deleteOrderRelationship } from '../api/mergedData';
-import { getOrders } from '../api/orderData';
+import { getOrders, getSingleOrder } from '../api/orderData';
 import { viewAllOrders, emptyOrders } from '../pages/orders';
 import viewOrderDetails from '../pages/viewOrderDetails';
 import addItemForm from '../components/forms/addItemForm';
@@ -50,6 +50,13 @@ const domEvents = (user) => {
 
     if (e.target.id.includes('create-order')) {
       createOrderForm();
+    }
+  });
+
+  document.querySelector('#card-container').addEventListener('click', (e) => {
+    if (e.target.id.includes('edit-details-btn')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      getSingleOrder(firebaseKey).then((obj) => createOrderForm(obj));
     }
   });
 };
