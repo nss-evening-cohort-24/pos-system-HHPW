@@ -12,7 +12,7 @@ const createOrderForm = (obj = {}) => {
   </div>
   <div class="mb-3">
     <label class="form-label">Customer Phone</label>
-    <input type="text" class="form-control" id="customerPhone" value="${obj.customerPhone || ''}" required>
+    <input type="text" class="form-control" id="customerPhone" value="${obj.phoneNumber || ''}" required>
   </div>
   <div class="mb-3">
     <label class="form-label">Customer Email</label>
