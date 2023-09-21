@@ -7,6 +7,7 @@ import addItemForm from '../components/forms/addItemForm';
 import viewRevenue from '../pages/viewRevenue';
 import getRevenue from '../api/revenueData';
 import { deleteOrderItem, getSingleItem } from '../api/orderItemsData';
+import paymentForm from '../components/forms/paymentForm';
 
 /* eslint-disable no-alert */
 const domEvents = (user) => {
@@ -70,6 +71,12 @@ const domEvents = (user) => {
     if (e.target.id.includes('edit-details-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
       getSingleOrder(firebaseKey).then((obj) => createOrderForm(obj));
+    }
+  });
+
+  document.querySelector('#view-container').addEventListener('click', (e) => {
+    if (e.target.id.includes('go-to-payment-btn')) {
+      paymentForm();
     }
   });
 };
