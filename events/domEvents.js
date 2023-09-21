@@ -4,6 +4,7 @@ import { getOrders, getSingleOrder } from '../api/orderData';
 import { viewAllOrders, emptyOrders } from '../pages/orders';
 import viewOrderDetails from '../pages/viewOrderDetails';
 import addItemForm from '../components/forms/addItemForm';
+import paymentForm from '../components/forms/paymentForm';
 
 /* eslint-disable no-alert */
 const domEvents = (user) => {
@@ -57,6 +58,12 @@ const domEvents = (user) => {
     if (e.target.id.includes('edit-details-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
       getSingleOrder(firebaseKey).then((obj) => createOrderForm(obj));
+    }
+  });
+
+  document.querySelector('#view-container').addEventListener('click', (e) => {
+    if (e.target.id.includes('go-to-payment-btn')) {
+      paymentForm();
     }
   });
 };
