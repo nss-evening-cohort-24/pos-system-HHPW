@@ -3,6 +3,7 @@ import { viewAllOrders } from '../pages/orders';
 import { createOrderItem, updateOrderItem } from '../api/orderItemsData';
 import viewOrderDetails from '../pages/viewOrderDetails';
 import { getOrderDetails } from '../api/mergedData';
+import { createRevenue, updateRevenue } from '../api/revenueData';
 
 const formEvents = (user) => {
   document.querySelector('#form-container').addEventListener('submit', (e) => {
@@ -55,6 +56,25 @@ const formEvents = (user) => {
       };
       updateOrder(payload).then(() => {
         getOrders(user.uid).then(viewAllOrders);
+      });
+    }
+
+    if (e.target.id.includes('payment-form')) {
+      console.warn('hi');
+      const [, orderId] = e.target.id.split('--');
+      const dateSubmitted = new Date();
+      const date = dateSubmitted.toLocaleString();
+      const payload = {
+        orderId,
+        paymentType: document.querySelector('#payment-type').value,
+        tipAmount: document.querySelector('#tip-amount').value,
+        orderTotal: document.querySelector('#orderTotal').value,
+        orderDate: date
+      };
+      createRevenue(payload).then(({ name }) => {
+        const patchPayload = { firebaseKey: name };
+
+        updateRevenue(patchPayload);
       });
     }
   });

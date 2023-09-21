@@ -5,7 +5,7 @@ import { viewAllOrders, emptyOrders } from '../pages/orders';
 import viewOrderDetails from '../pages/viewOrderDetails';
 import addItemForm from '../components/forms/addItemForm';
 import viewRevenue from '../pages/viewRevenue';
-import getRevenue from '../api/revenueData';
+import { getRevenue } from '../api/revenueData';
 import { deleteOrderItem, getSingleItem } from '../api/orderItemsData';
 import paymentForm from '../components/forms/paymentForm';
 
@@ -65,18 +65,15 @@ const domEvents = (user) => {
         getOrderDetails(orderId).then((res) => viewOrderDetails(res));
       });
     }
-  });
 
-  document.querySelector('#card-container').addEventListener('click', (e) => {
     if (e.target.id.includes('edit-details-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
       getSingleOrder(firebaseKey).then((obj) => createOrderForm(obj));
     }
-  });
 
-  document.querySelector('#view-container').addEventListener('click', (e) => {
     if (e.target.id.includes('go-to-payment-btn')) {
-      paymentForm();
+      const [, orderId] = e.target.id.split('--');
+      getOrderDetails(orderId).then((obj) => paymentForm(obj));
     }
   });
 };
