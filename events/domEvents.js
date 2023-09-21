@@ -4,7 +4,7 @@ import { getOrders, getSingleOrder } from '../api/orderData';
 import { viewAllOrders, emptyOrders } from '../pages/orders';
 import viewOrderDetails from '../pages/viewOrderDetails';
 import addItemForm from '../components/forms/addItemForm';
-// import { deleteOrderItem } from '../api/orderItemsData';
+import { deleteOrderItem, getSingleItem } from '../api/orderItemsData';
 
 /* eslint-disable no-alert */
 const domEvents = (user) => {
@@ -55,13 +55,11 @@ const domEvents = (user) => {
 
     if (e.target.id.includes('delete-order-item-btn')) {
       const [, itemId, orderId] = e.target.id.split('--');
-  
-        // GET THE SINGLE ORDERBOOK WITH THE RELATED BOOK AND ORDER ID
-        getSingleBookOrder(bookId, orderId).then((obj) => deleteBookOrder(obj.firebaseKey)).then(() => {
-          getOrderDetails(orderId).then((res) => viewOrder(res, user.uid));
-        });
-      }
-  
+
+      getSingleItem(itemId, orderId).then((obj) => deleteOrderItem(obj.firebaseKey)).then(() => {
+        getOrderDetails(orderId).then((res) => viewOrderDetails(res));
+      });
+    }
   });
 
   document.querySelector('#card-container').addEventListener('click', (e) => {

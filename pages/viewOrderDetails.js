@@ -18,7 +18,7 @@ const viewOrderDetails = (obj) => {
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">${item.item_name}</h5>
-          <p class="card-text bold">${item.item_price}</p>
+          <p class="card-text bold">${item.item_price.toFixed(2)}</p>
           <i id="delete-order-item-btn--${item.firebaseKey}--${obj.firebaseKey}" class="btn btn-danger fas fa-trash-alt"></i>
       </div>
     </div>`;
