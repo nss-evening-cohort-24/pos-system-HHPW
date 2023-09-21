@@ -67,10 +67,18 @@ const updateOrderItem = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getSingleItem = async (itemId, orderId) => {
+  const allOrderItems = await getOrderItems(orderId);
+  const singleOrderItem = await allOrderItems.find((item) => item.itemId === itemId);
+
+  return singleOrderItem;
+};
+
 export {
   getOrderItems,
   getSingleOrderItem,
   deleteOrderItem,
   updateOrderItem,
-  createOrderItem
+  createOrderItem,
+  getSingleItem
 };
