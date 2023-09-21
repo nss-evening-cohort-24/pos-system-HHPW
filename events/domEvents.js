@@ -6,6 +6,7 @@ import viewOrderDetails from '../pages/viewOrderDetails';
 import addItemForm from '../components/forms/addItemForm';
 import viewRevenue from '../pages/viewRevenue';
 import getRevenue from '../api/revenueData';
+import { deleteOrderItem, getSingleItem } from '../api/orderItemsData';
 
 /* eslint-disable no-alert */
 const domEvents = (user) => {
@@ -31,9 +32,7 @@ const domEvents = (user) => {
       const [, orderId] = e.target.id.split('--');
       addItemForm(orderId);
     }
-  });
 
-  document.querySelector('#main-container').addEventListener('click', (e) => {
     if (e.target.id.includes('delete-order-btn')) {
       if (window.confirm('Want to delete?')) {
         const [, firebaseKey] = e.target.id.split('--');
@@ -57,6 +56,14 @@ const domEvents = (user) => {
     if (e.target.id.includes('view-revenue-btn')) {
       getRevenue().then(viewRevenue);
     }
+
+    if (e.target.id.includes('delete-order-item-btn')) {
+      const [, itemId, orderId] = e.target.id.split('--');
+
+      getSingleItem(itemId, orderId).then((obj) => deleteOrderItem(obj.firebaseKey)).then(() => {
+        getOrderDetails(orderId).then((res) => viewOrderDetails(res));
+      });
+    }
   });
 
   document.querySelector('#card-container').addEventListener('click', (e) => {
@@ -66,5 +73,4 @@ const domEvents = (user) => {
     }
   });
 };
-
 export default domEvents;
