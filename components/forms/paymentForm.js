@@ -7,8 +7,8 @@ const paymentForm = (obj) => {
 
   let domString = '';
   domString += `
-  <form id='payment-form--${obj.orderId}'>
-    <h1 id="orderTotal" value="${total.toFixed(2)}">Total: ${total.toFixed(2)}</h1>
+  <form id='payment-form--${obj.firebaseKey}--${total.toFixed(2)}'>
+    <h1 id="orderTotal" >Total: ${total.toFixed(2)}</h1>
     <select class="form-select" id="payment-type" aria-label="Payment Type" required>
       <option selected>Select A Payment Type</option>
       <option value="cash">Cash</option>
@@ -21,7 +21,7 @@ const paymentForm = (obj) => {
       <label for="tip-amount" class="form-label">Tip Amount</label>
       <input type="number" name="currency" class="form-control" id="tip-amount" aria-describedby="emailHelp" required>
     </div>
-    <button type="submit" class="btn btn-primary" id="close-order-form">Close Order</button>
+    <button type="submit" class="btn btn-primary" id="payment-form-submit">Close Order</button>
   </form>
   `;
 

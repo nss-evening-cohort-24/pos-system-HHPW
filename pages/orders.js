@@ -17,7 +17,7 @@ const viewAllOrders = (array) => {
       domString += `<div class="card" id="order-card" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title">${obj.customerName}</h5>
-        <ul>Order Closed: ${obj.orderStatus}</ul>
+        <ul>Order Status: ${obj.orderStatus}</ul>
         <ul>${obj.phoneNumber}</ul>
         <ul>${obj.email}</ul>
         <ul>${obj.orderType}</ul>
