@@ -21,7 +21,7 @@ const paymentForm = (orderId) => {
   </form>
   `;
 
-  renderToDom('#view-container', domString);
+  renderToDom('#form-container', domString);
 };
 
 export default paymentForm;
