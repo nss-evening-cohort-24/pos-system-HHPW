@@ -10,7 +10,7 @@ const startApp = (user) => {
   domBuilder();
   navBar();
   domEvents(user);
-  welcome();
+  welcome(user);
   formEvents(user);
   navEvents(user);
   logoutButton();

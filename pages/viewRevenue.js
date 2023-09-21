@@ -3,14 +3,17 @@ import renderToDom from '../utils/renderToDom';
 
 const viewRevenue = (obj = {}) => {
   clearDom();
+  const USDollar = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  });
   let domString = '';
   domString += `
   <div id="view-revenue-info">
-    <h1>Revenue</h1>
-    <h1>Total Revenue: $ ${obj.totalRevenue}</h1>
+    <h1>Total Revenue: ${USDollar.format(obj.totalRevenue)}</h1>
     <div id="revenue-details">
       <h3>Revenue Details</h3>
-      <p>Total Tips: ${obj.totalTips}</p>
+      <p>Total Tips: ${USDollar.format(obj.totalTips)}</p>
       <p>Total Phone Orders: ${obj.phoneOrders}</p>
       <p>Total In-Person Orders: ${obj.inPersonOrders}</p>
     </div>

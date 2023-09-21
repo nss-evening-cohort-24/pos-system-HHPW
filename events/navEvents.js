@@ -16,7 +16,7 @@ const navEvents = (user) => {
     }
     if (e.target.id.includes('home-btn')) {
       clearDom();
-      welcome();
+      welcome(user);
     }
   });
 };
