@@ -2,6 +2,7 @@ import { getOrders } from '../api/orderData';
 import { emptyOrders, viewAllOrders } from '../pages/orders';
 import welcome from '../pages/welcome';
 import clearDom from '../utils/clearDom';
+import { viewClosedOrders } from '../pages/viewClosed';
 
 const navEvents = (user) => {
   document.querySelector('#navigation').addEventListener('click', (e) => {
@@ -17,6 +18,9 @@ const navEvents = (user) => {
     if (e.target.id.includes('home-btn')) {
       clearDom();
       welcome(user);
+    }
+    if (e.target.id.includes('view-closed-orders')) {
+      getOrders(user.uid).then((array) => viewClosedOrders(array));
     }
   });
 };
