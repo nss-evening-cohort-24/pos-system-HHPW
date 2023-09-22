@@ -64,15 +64,16 @@ const formEvents = (user) => {
     }
 
     if (e.target.id.includes('payment-form')) {
-      const [, orderId, total] = e.target.id.split('--');
+      const [, orderId, total, orderType] = e.target.id.split('--');
       const dateSubmitted = new Date();
       const date = dateSubmitted.toLocaleString();
       const payload = {
         orderId,
         paymentType: document.querySelector('#payment-type').value,
         tipAmount: document.querySelector('#tip-amount').value,
-        orderTotal: total,
-        orderDate: date
+        orderTotal: Number(total),
+        orderDate: date,
+        orderType
       };
 
       createRevenue(payload).then(({ name }) => {
