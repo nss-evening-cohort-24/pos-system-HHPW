@@ -16,7 +16,6 @@ const viewClosedOrders = (array) => {
         <ul>${obj.phoneNumber}</ul>
         <ul>${obj.email}</ul>
         <ul>${obj.orderType}</ul>
-        <button type="button" id="view-details-btn--${obj.firebaseKey}" class="btn btn-outline-dark">View</button>
       </div>
     </div>
       `;
