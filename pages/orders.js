@@ -8,12 +8,12 @@ const emptyOrders = () => {
 
 const viewAllOrders = (array) => {
   clearDom();
-
+  const openOrders = array.filter((item) => item.orderStatus === 'open');
   let domString = '';
-  if (array.length < 1) {
-    domString += '<p>No Orders Found</p>';
+  if (openOrders.length < 1) {
+    domString += '<p>No Open Orders Found</p>';
   } else {
-    array.forEach((obj) => {
+    openOrders.forEach((obj) => {
       domString += `<div class="card" id="order-card" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title">${obj.customerName}</h5>
@@ -29,6 +29,10 @@ const viewAllOrders = (array) => {
       `;
     });
   }
+  renderToDom('#card-container', domString);
+  domString += `
+  <button type="button" id="view-closed-orders" class="btn btn-outline-dark">View Closed Orders</button>
+  `;
   renderToDom('#card-container', domString);
 };
 
