@@ -3,7 +3,6 @@ import renderToDom from '../utils/renderToDom';
 
 const viewOrderDetails = (obj) => {
   clearDom();
-  console.warn(obj);
   let domString = '';
   const total = obj.orderItems.reduce((prev, next) => prev + next.item_price, 0);
 

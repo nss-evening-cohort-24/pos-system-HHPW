@@ -5,9 +5,10 @@ import { viewAllOrders, emptyOrders } from '../pages/orders';
 import viewOrderDetails from '../pages/viewOrderDetails';
 import addItemForm from '../components/forms/addItemForm';
 import viewRevenue from '../pages/viewRevenue';
-import getRevenue from '../api/revenueData';
+import { getRevenue } from '../api/revenueData';
 import { deleteOrderItem, getSingleItem } from '../api/orderItemsData';
 import paymentForm from '../components/forms/paymentForm';
+import viewClosedOrders from '../pages/viewClosed';
 
 /* eslint-disable no-alert */
 const domEvents = (user) => {
@@ -65,19 +66,20 @@ const domEvents = (user) => {
         getOrderDetails(orderId).then((res) => viewOrderDetails(res));
       });
     }
-  });
 
-  document.querySelector('#card-container').addEventListener('click', (e) => {
     if (e.target.id.includes('edit-details-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
       getSingleOrder(firebaseKey).then((obj) => createOrderForm(obj));
     }
-  });
 
-  document.querySelector('#view-container').addEventListener('click', (e) => {
     if (e.target.id.includes('go-to-payment-btn')) {
       paymentForm();
     }
+
+    if (e.target.id.includes('view-closed-orders')) {
+      getOrders(user.uid).then((array) => viewClosedOrders(array));
+    }
   });
 };
+
 export default domEvents;

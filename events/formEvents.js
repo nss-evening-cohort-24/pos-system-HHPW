@@ -1,8 +1,13 @@
-import { createOrder, getOrders, updateOrder } from '../api/orderData';
+import {
+  createOrder,
+  getOrders,
+  updateOrder,
+} from '../api/orderData';
 import { viewAllOrders } from '../pages/orders';
 import { createOrderItem, updateOrderItem } from '../api/orderItemsData';
 import viewOrderDetails from '../pages/viewOrderDetails';
 import { getOrderDetails } from '../api/mergedData';
+import { createRevenue, updateRevenue } from '../api/revenueData';
 
 const formEvents = (user) => {
   document.querySelector('#form-container').addEventListener('submit', (e) => {
@@ -12,7 +17,7 @@ const formEvents = (user) => {
       const payload = {
         customerName: document.querySelector('#customerName').value,
         email: document.querySelector('#customerEmail').value,
-        orderStatus: false,
+        orderStatus: 'open',
         orderType: document.querySelector('#orderType').value,
         phoneNumber: document.querySelector('#customerPhone').value,
         uid: user.uid
@@ -54,6 +59,33 @@ const formEvents = (user) => {
         firebaseKey,
       };
       updateOrder(payload).then(() => {
+        getOrders(user.uid).then(viewAllOrders);
+      });
+    }
+
+    if (e.target.id.includes('payment-form')) {
+      const [, orderId, total] = e.target.id.split('--');
+      const dateSubmitted = new Date();
+      const date = dateSubmitted.toLocaleString();
+      const payload = {
+        orderId,
+        paymentType: document.querySelector('#payment-type').value,
+        tipAmount: document.querySelector('#tip-amount').value,
+        orderTotal: total,
+        orderDate: date
+      };
+
+      createRevenue(payload).then(({ name }) => {
+        const patchPayload = { firebaseKey: name };
+
+        updateRevenue(patchPayload);
+      });
+
+      const orderPatch = {
+        orderStatus: 'closed',
+        firebaseKey: orderId
+      };
+      updateOrder(orderPatch).then(() => {
         getOrders(user.uid).then(viewAllOrders);
       });
     }
