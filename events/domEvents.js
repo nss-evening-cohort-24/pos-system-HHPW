@@ -8,7 +8,7 @@ import viewRevenue from '../pages/viewRevenue';
 import { getRevenue } from '../api/revenueData';
 import { deleteOrderItem, getSingleItem } from '../api/orderItemsData';
 import paymentForm from '../components/forms/paymentForm';
-import viewClosedOrders from '../pages/viewClosed';
+import { viewClosedOrders, viewClosedDetails } from '../pages/viewClosed';
 
 /* eslint-disable no-alert */
 const domEvents = (user) => {
@@ -73,11 +73,19 @@ const domEvents = (user) => {
     }
 
     if (e.target.id.includes('go-to-payment-btn')) {
-      paymentForm();
+      const [, firebaseKey] = e.target.id.split('--');
+      getOrderDetails(firebaseKey).then((obj) => paymentForm(obj));
     }
 
     if (e.target.id.includes('view-closed-orders')) {
       getOrders(user.uid).then((array) => viewClosedOrders(array));
+    }
+
+    if (e.target.id.includes('view-closed-details')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      getOrderDetails(firebaseKey).then((data) => {
+        viewClosedDetails(data);
+      });
     }
   });
 };

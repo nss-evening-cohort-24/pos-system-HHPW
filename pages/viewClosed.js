@@ -16,6 +16,7 @@ const viewClosedOrders = (array) => {
         <ul>${obj.phoneNumber}</ul>
         <ul>${obj.email}</ul>
         <ul>${obj.orderType}</ul>
+        <button type="button" id="view-closed-details--${obj.firebaseKey}" class="btn btn-outline-dark">View</button>
       </div>
     </div>
       `;
@@ -24,4 +25,21 @@ const viewClosedOrders = (array) => {
   renderToDom('#card-container', domString);
 };
 
-export default viewClosedOrders;
+const viewClosedDetails = (obj) => {
+  clearDom();
+  let domString = '';
+
+  obj.orderItems.forEach((item) => {
+    domString += `
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">${item.item_name}</h5>
+        <p class="card-text bold">${item.item_price.toFixed(2)}</p>
+    </div>
+  </div>`;
+  });
+
+  renderToDom('#view-container', domString);
+};
+
+export { viewClosedOrders, viewClosedDetails };
