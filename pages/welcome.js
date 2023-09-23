@@ -1,10 +1,11 @@
 import renderToDom from '../utils/renderToDom';
+import bigLogo from '../components/images/bigLogo.png';
 
 const welcome = (user) => {
   let domstring = '';
   domstring = `
   <h1 id="greeting">Welcome, ${user.displayName}!</h1>
-  <br><img src="../components/images/hhpw-record 2.png"><br>
+  <br><img src="${bigLogo}"><br>
   <button type="button" class="btn btn-success" id="view-orders-btn">View Orders</button>
   <button type="button" class="btn btn-info" id="create-order-btn">Create Order</button>
   <button type="button" class="btn btn-warning" id="view-revenue-btn">View Revenue</button>
