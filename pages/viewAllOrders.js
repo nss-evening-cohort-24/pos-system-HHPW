@@ -21,8 +21,8 @@ const viewAllOrders = (array) => {
             <ul>${obj.phoneNumber}</ul>
             <ul>${obj.email}</ul>
             <ul>${obj.orderType}</ul>
-            <button type="button" id="view-details-btn--${obj.firebaseKey}" class="btn btn-success">View</button>
             ${obj.orderStatus === 'open' ? `
+            <button type="button" id="view-details-btn--${obj.firebaseKey}" class="btn btn-success">View</button>
             <button type="button" id="edit-details-btn--${obj.firebaseKey}" class="btn btn-primary">Edit</button>
             <button type="button" id="delete-order-btn--${obj.firebaseKey}" class="btn btn-danger">Delete</button>` : ''} 
             </div>
