@@ -12,8 +12,11 @@ const navBar = () => {
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item active">
               <a class="nav-link" href="#" id="view-all-orders-nav">
-                View Orders <span class="sr-only">(current)</span>
+                View Open Orders <span class="sr-only">(current)</span>
               </a>
+            </li>
+            <li class="nav-item">
+              <a id="view-closed-orders" class="nav-link" href="#">View Closed Orders</a>
             </li>
             <li>
             <input
