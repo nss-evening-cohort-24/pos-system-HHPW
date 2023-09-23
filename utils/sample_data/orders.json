@@ -5,7 +5,7 @@
     "phoneNumber": "971-603-8031",
     "email": "rgainforth0@123-reg.co.uk",
     "orderType": "In-Person",
-    "orderStatus": true,
+    "orderStatus": "open",
     "firebaseKey": "280019251-8",
     "uid": "Uu9HWe2oDJbNGa7m8Bquf0aAyPk1"
   },
@@ -15,7 +15,7 @@
     "phoneNumber": "298-901-3692",
     "email": "mfyldes1@ebay.com",
     "orderType": "In-Person",
-    "orderStatus": false,
+    "orderStatus": "closed",
     "firebaseKey": "010207055-5",
     "uid": "Uu9HWe2oDJbNGa7m8Bquf0aAyPk1"
   },
@@ -25,7 +25,7 @@
     "phoneNumber": "228-274-0193",
     "email": "btewkesberry2@hc360.com",
     "orderType": "Phone",
-    "orderStatus": true,
+    "orderStatus": "open",
     "firebaseKey": "594132184-8",
     "uid": "Uu9HWe2oDJbNGa7m8Bquf0aAyPk1"
   },
@@ -35,7 +35,7 @@
     "phoneNumber": "848-154-6068",
     "email": "sfranke3@chicagotribune.com",
     "orderType": "Phone",
-    "orderStatus": false,
+    "orderStatus": "closed",
     "firebaseKey": "969618379-8",
     "uid": "Uu9HWe2oDJbNGa7m8Bquf0aAyPk1"
   },
@@ -45,7 +45,7 @@
     "phoneNumber": "442-847-4446",
     "email": "edidsbury4@liveinternet.ru",
     "orderType": "In-Person",
-    "orderStatus": true,
+    "orderStatus": "open",
     "firebaseKey": "194331063-7",
     "uid": "w7gGHCsxZegVnNnuVJzfGHNBPa43"
   },
@@ -55,7 +55,7 @@
     "phoneNumber": "780-645-4309",
     "email": "hholleworth5@lulu.com",
     "orderType": "Phone",
-    "orderStatus": false,
+    "orderStatus": "closed",
     "firebaseKey": "233748873-X",
     "uid": "w7gGHCsxZegVnNnuVJzfGHNBPa43"
   },
@@ -65,7 +65,7 @@
     "phoneNumber": "327-819-0102",
     "email": "ispeight6@xrea.com",
     "orderType": "Phone",
-    "orderStatus": true,
+    "orderStatus": "open",
     "firebaseKey": "745189118-6",
     "uid": "w7gGHCsxZegVnNnuVJzfGHNBPa43"
   },
@@ -75,7 +75,7 @@
     "phoneNumber": "477-246-5332",
     "email": "ncopland7@intel.com",
     "orderType": "In-Person",
-    "orderStatus": true,
+    "orderStatus": "open",
     "firebaseKey": "407994654-6",
     "uid": "Q18AhEz1Y5PduR2XlNobmdUSpRE3"
   },
@@ -85,7 +85,7 @@
     "phoneNumber": "256-625-7044",
     "email": "tbaurerich8@reference.com",
     "orderType": "Phone",
-    "orderStatus": false,
+    "orderStatus": "closed",
     "firebaseKey": "392165108-5",
     "uid": "Q18AhEz1Y5PduR2XlNobmdUSpRE3"
   },
@@ -95,7 +95,7 @@
     "phoneNumber": "770-337-9643",
     "email": "wtrevett9@sitemeter.com",
     "orderType": "Phone",
-    "orderStatus": true,
+    "orderStatus": "open",
     "firebaseKey": "973960909-0",
     "uid": "Q18AhEz1Y5PduR2XlNobmdUSpRE3"
   }

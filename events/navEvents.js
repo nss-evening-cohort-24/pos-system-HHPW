@@ -1,8 +1,9 @@
 import { getOrders, searchOrders } from '../api/orderData';
-import { emptyOrders, viewAllOrders } from '../pages/orders';
+import { emptyOrders, viewAllOrders } from '../pages/viewAllOrders';
 import welcome from '../pages/welcome';
 import clearDom from '../utils/clearDom';
 import { viewClosedOrders } from '../pages/viewClosed';
+import viewOpenOrders from '../pages/viewOpenOrders';
 
 const navEvents = (user) => {
   document.querySelector('#navigation').addEventListener('click', (e) => {
@@ -21,6 +22,9 @@ const navEvents = (user) => {
     }
     if (e.target.id.includes('view-closed-orders')) {
       getOrders(user.uid).then((array) => viewClosedOrders(array));
+    }
+    if (e.target.id.includes('view-open-orders')) {
+      getOrders(user.uid).then((array) => viewOpenOrders(array));
     }
   });
 

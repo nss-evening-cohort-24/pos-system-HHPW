@@ -3,7 +3,7 @@ import {
   getOrders,
   updateOrder,
 } from '../api/orderData';
-import { viewAllOrders } from '../pages/orders';
+import { viewAllOrders } from '../pages/viewAllOrders';
 import { createOrderItem, updateOrderItem } from '../api/orderItemsData';
 import viewOrderDetails from '../pages/viewOrderDetails';
 import { getOrderDetails } from '../api/mergedData';

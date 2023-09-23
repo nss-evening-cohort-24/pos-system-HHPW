@@ -1,12 +1,7 @@
-import renderToDom from '../utils/renderToDom';
 import clearDom from '../utils/clearDom';
+import renderToDom from '../utils/renderToDom';
 
-const emptyOrders = () => {
-  const domString = '<h1> There are no orders! </h1>';
-  renderToDom('#view-container', domString);
-};
-
-const viewAllOrders = (array) => {
+const viewOpenOrders = (array) => {
   clearDom();
   const openOrders = array.filter((item) => item.orderStatus === 'open');
   let domString = '';
@@ -22,9 +17,9 @@ const viewAllOrders = (array) => {
             <ul>${obj.phoneNumber}</ul>
             <ul>${obj.email}</ul>
             <ul>${obj.orderType}</ul>
-            <button type="button" id="view-details-btn--${obj.firebaseKey}" class="btn btn-success">View</button>
-            <button type="button" id="edit-details-btn--${obj.firebaseKey}" class="btn btn-primary">Edit</button>
-            <button type="button" id="delete-order-btn--${obj.firebaseKey}" class="btn btn-danger">Delete</button>
+            <button type="button" id="view-details-btn--${obj.firebaseKey}" class="btn btn-outline-dark">View</button>
+            <button type="button" id="edit-details-btn--${obj.firebaseKey}" class="btn btn-outline-dark">Edit</button>
+            <button type="button" id="delete-order-btn--${obj.firebaseKey}" class="btn btn-outline-dark">Delete</button>
           </div>
         </div>
       `;
@@ -33,4 +28,4 @@ const viewAllOrders = (array) => {
   renderToDom('#card-container', domString);
 };
 
-export { emptyOrders, viewAllOrders };
+export default viewOpenOrders;
