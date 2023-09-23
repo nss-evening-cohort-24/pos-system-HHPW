@@ -25,8 +25,10 @@ const viewOrderDetails = (obj) => {
   }
 
   domString += `
-    <button type="button" id="add-item-btn--${obj.firebaseKey}" class="btn btn-primary">Add Item</button>
-    <button type="button" id="go-to-payment-btn--${obj.firebaseKey}" class="btn btn-secondary">Go to Payment</button>
+    <div id="order-view-btn">
+      <button type="button" id="add-item-btn--${obj.firebaseKey}" class="btn btn-primary">Add Item</button>
+      <button type="button" id="go-to-payment-btn--${obj.firebaseKey}" class="btn btn-warning">Go to Payment</button>
+    </div>
     `;
   renderToDom('#view-container', domString);
 };
