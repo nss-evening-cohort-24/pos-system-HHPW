@@ -4,6 +4,7 @@ import welcome from '../pages/welcome';
 import clearDom from '../utils/clearDom';
 import { viewClosedOrders } from '../pages/viewClosed';
 import viewOpenOrders from '../pages/viewOpenOrders';
+import createOrderForm from '../components/forms/createOrderForm';
 
 const navEvents = (user) => {
   document.querySelector('#navigation').addEventListener('click', (e) => {
@@ -25,6 +26,9 @@ const navEvents = (user) => {
     }
     if (e.target.id.includes('view-open-orders')) {
       getOrders(user.uid).then((array) => viewOpenOrders(array));
+    }
+    if (e.target.id.includes('create-order-nav')) {
+      createOrderForm();
     }
   });
 
