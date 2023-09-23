@@ -32,7 +32,7 @@ const navEvents = (user) => {
           if (search.length) {
             viewAllOrders(search);
           } else {
-            emptyOrders();
+            viewClosedOrders(search);
           }
         });
       document.querySelector('#search-bar').value = '';
