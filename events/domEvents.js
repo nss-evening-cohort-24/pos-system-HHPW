@@ -1,7 +1,7 @@
 import createOrderForm from '../components/forms/createOrderForm';
 import { getOrderDetails, deleteOrderRelationship } from '../api/mergedData';
 import { getOrders, getSingleOrder } from '../api/orderData';
-import { viewAllOrders, emptyOrders } from '../pages/orders';
+import { viewAllOrders, emptyOrders } from '../pages/viewAllOrders';
 import viewOrderDetails from '../pages/viewOrderDetails';
 import addItemForm from '../components/forms/addItemForm';
 import viewRevenue from '../pages/viewRevenue';
