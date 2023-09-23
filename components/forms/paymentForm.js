@@ -6,8 +6,8 @@ const paymentForm = (obj) => {
   const total = Number(obj.orderItems.reduce((prev, next) => prev + next.item_price, 0));
   let domString = '';
   domString += `
-  <form id='payment-form--${obj.firebaseKey}--${total.toFixed(2)}--${obj.orderType}'>
-    <h1 id="orderTotal">Total: $${total.toFixed(2)}</h1>
+  <form id='payment-form--${obj.firebaseKey}--${total}--${obj.orderType}'>
+    <h1 id="orderTotal">Total: $${total}</h1>
     <select class="form-select" id="payment-type" aria-label="Payment Type" required>
       <option selected>Select A Payment Type</option>
       <option value="cash">Cash</option>
