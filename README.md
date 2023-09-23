@@ -1,47 +1,38 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/liKnqtLP)
-<div style="text-align:center">
-<h1>Hip Hop, Pizza, and Wangs (HHP+W)</h1>
+## Hip Hop, Pizza, n’ Wangs POS System
 
-<image src="https://user-images.githubusercontent.com/29741570/205346767-a182560c-64a6-4cfa-80b3-0d64cf998242.png" style="height:300px;"></image></div>
+#### NSS E24 Group Project by panicRoom
 
-## Get Started
-**READ ALL INSTRUCTIONS BEFORE BEGINNING THIS PROJECT.** Take notes as you read.
+For this group project, our team was contacted by a mom and pop restaurant, Hip Hop, Pizza, n’ Wangs, to help streamline their order processing system. As their business has grown, they were in need of a new point of sale system to keep up with their demand. 
 
-Everything that needs to be done before coding starts.
+Features of this application include:
+Google User Authentication 
+Homepage with the user’s name displayed and buttons that allow you to view all orders, create an order, and view revenue
+Create an order for a customer that includes their information and order type (phone or in-person)
+Update an order if customer information is incorrect
+View, Edit or Delete an order
+Under view Order Details, you are able to add or delete a menu item from the order
+From the view order details page, you are able to close an order by processing the Close Payment form
+The option to filter to between all orders, open orders, and closed orders
+Ability to search through all orders
+User can also view all up to date revenue
 
-* **ERD** - Create an ERD to show the relationships between all of  your data
-* **Postman Collection** - Create a postman collection to store and test out all of your API calls.
-* **[Wireframes](https://www.figma.com/file/4y3EZddALuBR3ouSEM57Np/MVP?node-id=0%3A1)** - This is the basic MVP wireframe. You can choose to style how you wish.
-* **Flowchart** - Plan out the flow of your data through the application
-* **Github Issue Tickets** - Using the Project Instructions as a guide, create issue tickets for this project’s work.
-* **Github Milestones** - Separate those issue tickets into Milestones to plan out the work.
+## Deployed Site
 
-## Definition of Done
+https://main--hhpw-panicroom.netlify.app/
 
-Do not submit this project until all of the following are complete:
+## Project Board
 
-1. All items are completed in getting started
-1. MVP, defined by the Acceptance Criteria, has been completed
-1. The title of your application is visible in the browser tab
-1. The project has been deployed
-1. Loom video has been created
-1. `README.md` has been updated
+https://github.com/orgs/nss-evening-cohort-24/projects/7/views/1
 
-## Requirements
+## Wireframes and Planning Tools
 
-Things to remember while coding out the project
+Wireframe - https://www.figma.com/file/4y3EZddALuBR3ouSEM57Np/MVP?type=design&node-id=0-1&mode=design&t=ImvASXYDAL5omNXK-0
 
-* Clean code - single responsibility principle
-* ES6 Modules bundled with webpack
-* No errors - linters should be clean
-* Bootstrap for styling
-* Completely planned out - before each section you should be making new cards on your Github project board before you code
-* Wireframes are provided for you for MVP
-* You should have an ERD
+ERD - https://dbdiagram.io/d/panicRoomERD-64ffc58c02bd1c4a5e618257
 
-### Instructions
+Flow Chart - https://www.figma.com/file/hd6T2kFZERHFX8xL6ihOsa/Hip-Hop%2C-Pizza-and-Wangs?type=whiteboard&node-id=875-1086&t=6YAxGfqTkDmXqyZb-0
 
-* [MVP Definition - It Gets the Job Done](./instructions/mvp.md)
-* [Stretch Goals 1 - Filtering the Data](./instructions/stretch-1.md)
-* [Stretch Goals 2 - Dealing with Change](./instructions/stretch-2.md)
-* [Stretch Goals 3 - Play that Funky Music](./instructions/stretch-3.md)
+## Team panicRoom Contributors
+Maggie Chafee - https://github.com/MaggieChafee
+Courtney Fairall - https://github.com/cnfairall
+Brandon Schnurbusch - https://github.com/B33blebroxx
