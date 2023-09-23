@@ -1,12 +1,7 @@
-import renderToDom from '../utils/renderToDom';
 import clearDom from '../utils/clearDom';
+import renderToDom from '../utils/renderToDom';
 
-const emptyOrders = () => {
-  const domString = '<h1> There are no orders! </h1>';
-  renderToDom('#view-container', domString);
-};
-
-const viewAllOrders = (array) => {
+const viewOpenOrders = (array) => {
   clearDom();
   const openOrders = array.filter((item) => item.orderStatus === 'open');
   let domString = '';
@@ -33,4 +28,4 @@ const viewAllOrders = (array) => {
   renderToDom('#card-container', domString);
 };
 
-export { emptyOrders, viewAllOrders };
+export default viewOpenOrders;
