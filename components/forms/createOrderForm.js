@@ -18,8 +18,8 @@ const createOrderForm = (obj = {}) => {
     <label class="form-label">Customer Email</label>
     <input type="text" class="form-control" id="customerEmail" value="${obj.email || ''}" required>
   </div>
+  <label class="form-label">Order Type</label>
   <div class="input-group mb-3">
-    <label class="form-label">Order Type</label>
     <select class="form-select" id="orderType" ${obj.orderType || ''}>
       <option value="phone">Phone</option>
       <option value="in-person">In-Person</option>

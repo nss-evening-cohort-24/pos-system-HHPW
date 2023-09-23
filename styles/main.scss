@@ -26,11 +26,6 @@ form {
   justify-content: space-evenly;
 }
 
-#logout-button {
-  background: none;
-  border: none;
-}
-
 #view-container {
   display: flex;
   flex-direction: column;
@@ -64,4 +59,24 @@ button {
   margin-top: 10px;
 }
 
+#logout-button {
+  margin: 0;
+  background: none;
+  border: none;
+}
 
+#google-auth {
+  margin: 0;
+}
+
+form {
+  text-align: left;
+}
+
+button.navbar-toggler {
+  margin: 0;
+}
+
+.card {
+  margin: 10px;
+}
