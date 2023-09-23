@@ -33,6 +33,6 @@ ERD - https://dbdiagram.io/d/panicRoomERD-64ffc58c02bd1c4a5e618257
 Flow Chart - https://www.figma.com/file/hd6T2kFZERHFX8xL6ihOsa/Hip-Hop%2C-Pizza-and-Wangs?type=whiteboard&node-id=875-1086&t=6YAxGfqTkDmXqyZb-0
 
 ## Team panicRoom Contributors
-MaggieChafee - https://github.com/MaggieChafee
+Maggie Chafee - https://github.com/MaggieChafee
 Courtney Fairall - https://github.com/cnfairall
 Brandon Schnurbusch - https://github.com/B33blebroxx
