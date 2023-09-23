@@ -26,11 +26,6 @@ form {
   justify-content: space-evenly;
 }
 
-#logout-button {
-  background: none;
-  border: none;
-}
-
 #view-container {
   display: flex;
   flex-direction: column;
@@ -45,4 +40,43 @@ form {
   width: 300px;
   align-self: center;
   margin: 20px;
+}
+
+ul{
+  padding: 0;
+}
+
+.closed {
+  background-color: rgb(57, 56, 85);
+  color: white;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+#logout-button {
+  margin: 0;
+  background: none;
+  border: none;
+}
+
+#google-auth {
+  margin: 0;
+}
+
+form {
+  text-align: left;
+}
+
+button.navbar-toggler {
+  margin: 0;
+}
+
+.card {
+  margin: 10px;
 }

@@ -16,6 +16,7 @@ const paymentForm = (obj) => {
       <option value="check">Check</option>
       <option value="mobile">Mobile</option>
     </select>
+    <br>
     <div class="mb-3">
       <label for="tip-amount" class="form-label">Tip Amount</label>
       <input type="number" name="currency" class="form-control" id="tip-amount" aria-describedby="emailHelp" required>

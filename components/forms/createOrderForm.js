@@ -18,14 +18,14 @@ const createOrderForm = (obj = {}) => {
     <label class="form-label">Customer Email</label>
     <input type="text" class="form-control" id="customerEmail" value="${obj.email || ''}" required>
   </div>
-  <div class="input-group mb-3">
   <label class="form-label">Order Type</label>
-  <select class="form-select" id="orderType" ${obj.orderType || ''}>
-    <option value="phone">Phone</option>
-    <option value="in-person">In-Person</option>
-  </select>
+  <div class="input-group mb-3">
+    <select class="form-select" id="orderType" ${obj.orderType || ''}>
+      <option value="phone">Phone</option>
+      <option value="in-person">In-Person</option>
+    </select>
   </div>
-  <button type="submit" class="btn btn-dark">${obj.firebaseKey ? 'Update' : 'Start Order'}</button>
+  <button type="submit" class="btn btn-primary">${obj.firebaseKey ? 'Update' : 'Start Order'}</button>
   </form>
   `;
 
