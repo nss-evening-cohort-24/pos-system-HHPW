@@ -1,20 +1,22 @@
 ## Hip Hop, Pizza, n’ Wangs POS System
 
-#### NSS E24 Group Project by panicRoom
+## NSS E24 Group Project by panicRoom
 
-For this group project, our team was contacted by a mom and pop restaurant, Hip Hop, Pizza, n’ Wangs, to help streamline their order processing system. As their business has grown, they were in need of a new point of sale system to keep up with their demand. 
+For this group project, our team was contacted by a mom and pop restaurant, Hip Hop, Pizza, n’ Wangs, to help streamline their order processing system.
+As their business has grown, they were in need of a new point of sale system to keep up with their demand. 
 
-Features of this application include:
-Google User Authentication 
-Homepage with the user’s name displayed and buttons that allow you to view all orders, create an order, and view revenue
-Create an order for a customer that includes their information and order type (phone or in-person)
-Update an order if customer information is incorrect
-View, Edit or Delete an order
-Under view Order Details, you are able to add or delete a menu item from the order
-From the view order details page, you are able to close an order by processing the Close Payment form
-The option to filter to between all orders, open orders, and closed orders
-Ability to search through all orders
-User can also view all up to date revenue
+## Features
+
+- Google User Authentication 
+- Homepage with the user’s name displayed and buttons that allow you to view all orders, create an order, and view revenue
+- Create an order for a customer that includes their information and order type (phone or in-person)
+- Update an order if customer information is incorrect
+- View, Edit or Delete an order
+- Add or delete a menu item from the order under Order Details
+- Close an order by submitting the payment form from the view order details page
+- Filter orders by open or closed status
+- Search orders
+- View up to date revenue (total revenue from closed orders)
 
 ## Deployed Site
 
